@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Portfolio | Naga Sai Pavan Kumar Koppula | George Mason</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="css/common-style.css">
+  <link rel="stylesheet" href="css/topnav.css">
+</head>
+
+<body style="background-color: #FFCC33;">
+  <div class="topnav" id="myTopnav">
+    <a class="active">George Mason University</a>
+    <a href="index.html">Survey</a>
+  </div>
+  <div class="w3-container">
+    <div class="w3-row">
+      <div class="w3-col m3 w3-container">
+      </div>
+      <div class="w3-col m6 w3-container margin-bottom-120">
+        <form class="w3-container w3-card-4 w3-padding-24" style="background-color: white;" autocomplete="on">
+          <h1 class="headingClass">CS Department Survey Form</h1>
+          <div class="w3-section">
+            <label class="required" for="fname">First Name</label>
+            <!-- Input Type Text -->
+            <input class="w3-input" type="text" id="fname" name="firstname" placeholder="Your first name.." required
+              autofocus>
+          </div>
+          <div class="w3-section">
+            <label class="required" for="lname">Last Name</label>
+            <!-- Input Type Text -->
+            <input class="w3-input" type="text" id="lname" name="lastname" placeholder="Your last name.." required>
+          </div>
+          <div class="w3-section">
+            <label class="required" for="address">Street Address</label>
+            <!-- Input Type Text -->
+            <input class="w3-input" type="text" id="address" name="address" placeholder="Your home address.." required>
+          </div>
+          <div class="w3-section">
+            <label class="required" for="city">City</label>
+            <!-- Input Type Text -->
+            <input class="w3-input" type="text" id="city" name="city" placeholder="Your city.." required>
+          </div>
+          <div class="w3-section">
+            <label class="required" for="state">State</label>
+            <!-- Input Type Text -->
+            <input class="w3-input" type="text" id="state" name="state" placeholder="Your state.." required>
+          </div>
+          <div class="w3-section">
+            <label for="zip">Zip</label>
+            <!-- Input Type Text -->
+            <input class="w3-input" id="zip" name="zip" type="text" inputmode="numeric" placeholder="XXXXX"
+              pattern="^(?(^00000(|-0000))|(\d{5}(|-\d{4})))$">
+          </div>
+          <div class="w3-section">
+            <label for="phone">Contact Number</label>
+            <!-- Input Type Tel -->
+            <input class="w3-input" type="tel" id="phone" name="phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="xxx-xxx-xxxx">
+          </div>
+          <div class="w3-section">
+            <label class="required" for="email">Email</label>
+            <!-- Input Type Email -->
+            <input class="w3-input" type="email" id="email" placeholder="masonid@gmu.edu"
+              pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" required />
+          </div>
+          <div class="w3-section">
+            <label for="url">URL</label>
+            <!-- Input Type Text -->
+            <input class="w3-input" type="url" id="url" placeholder="Your website URL.." />
+          </div>
+          <div class="w3-section">
+            <label class="required" for="date">Date of Survey</label>
+            <!-- Input Type Date -->
+            <input class="w3-input" type="date" id="date" placeholder="MM/DD/YYYY" required />
+          </div>
+          <div class="w3-section">
+            <label class="required" for="graduation">
+              High School Graduation Month
+            </label> </br>
+            <!-- Dropdown Menu Options -->
+            <input type="text" id="gradutionmonth" placeholder="Graduation month.." list="months" required />
+            <datalist id="months">
+              <option value="January">
+              <option value="February">
+              <option value="March">
+              <option value="April">
+              <option value="May">
+              <option value="June">
+              <option value="July">
+              <option value="August">
+              <option value="September">
+              <option value="October">
+              <option value="November">
+              <option value="December">
+            </datalist>
+          </div>
+          <div class="w3-section">
+            <label class="required" for="graduation">
+              High School Graduation Year
+            </label>
+            <input class="w3-input" type="text" id="graduationyear" name="graduationyear"
+              placeholder="Your high school graduation year.." required>
+          </div>
+
+          <div class="w3-section">
+            <label for="campus">What do you like most about the campus?
+              <small>(Check all that apply)</small>
+            </label>
+            </br>
+            <!-- Input Type Checkbox -->
+            <input type="checkbox" id="students" name="students" value="students">
+            <label for="students">Students</label><br>
+            <input type="checkbox" id="location" name="location" value="location">
+            <label for="location">Location</label><br>
+            <input type="checkbox" id="atmosphere" name="atmosphere" value="atmosphere">
+            <label for="atmosphere">Atmosphere</label><br>
+            <input type="checkbox" id="dormrooms" name="dormrooms" value="dormrooms">
+            <label for="dormrooms">Dorm Rooms</label><br>
+            <input type="checkbox" id="sports" name="sports" value="sports">
+            <label for="sports">Sports</label><br>
+            <input type="checkbox" id="campus" name="campus" value="campus">
+            <label for="campus">Campus</label><br>
+          </div>
+          <div class="w3-section">
+            <label for="recommedation"> How likely would to recommend this school to other prospective students?
+            </label>
+            </br>
+            <select name="recommed" id="recommedation">
+              <option value="verylikely"> Very Likely</option>
+              <option value="liekly"> Liekly</option>
+              <option value="unliekly"> UnLiekly</option>
+            </select>
+          </div>
+
+          <div class="w3-section">
+            <label for="choice">
+              What made you interested in this university?
+            </label>
+            </br>
+            <!-- Input Type Radio Button -->
+            <input type="radio" id="choice-1" name="chioce" value="friends">
+            <label for="choice-1"> Friends</label><br>
+            <input type="radio" id="choice-2" name="chioce" value="television">
+            <label for="choice-2"> Television</label><br>
+            <input type="radio" id="choice-3" name="chioce" value="internet">
+            <label for="choice-3"> Internet</label><br>
+            <input type="radio" id="choice-4" name="chioce" value="other">
+            <label for="choice-4"> Other</label><br>
+          </div>
+          <div class="w3-section">
+            <label for="raffle">Raffle</label>
+            <!-- Input Type Text -->
+            <input class="w3-input" type="text" id="raffle" placeholder="Enter at least ten comma separated numbers ranging from 1 through 100.." />
+          </div>
+          <div class="w3-section">
+            <label for="comments">
+              Additional comments
+            </label>
+            </br>
+            <!-- multi-line text input control -->
+            <textarea class="w3-input" id="comments" name="comments" rows="4" cols="50"
+              placeholder="Your additional comments here.."></textarea>
+          </div>
+          <!-- Input Type Submit -->
+          <input type="submit" value="Submit">
+          <!-- Input Type Reset -->
+          <input type="reset" value="Cancel">
+        </form>
+      </div>
+      <div class="w3-col m3 w3-container"></div>
+    </div>
+  </div>
+  <footer id="footer" class="w3-row">
+    <div class="footer">
+      <a href="https://cs.gmu.edu/" target="_blank"><img src="w3images/mason-logo.png" height="100%"
+          alt="George Mason University Logo" style="width:10rem;" /></a>
+    </div>
+  </footer>
+</body>
+
+</html>
