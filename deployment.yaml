@@ -1,0 +1,35 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: survey-form-pipeline
+  labels: 
+    app: survey-form-pipeline
+spec:
+  replicas: 3
+  strategy:
+    type: Recreate
+  selector:
+    matchLabels: 
+      app: survey-form-pipeline
+  template:
+    metadata:
+      labels: 
+        app: survey-form-pipeline
+    spec:
+      containers:
+      - name: survey-form-pipeline
+        image: pavankoppula/studentsurvey645:tagversion
+        ports:
+        - {name: tomcat, containerPort: 8080}
+        imagePullPolicy: Always
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: swe645-hw2-service-account
+spec:
+  selector: 
+    app: survey-form-pipeline
+  ports:
+  - {name: tomcat, protocol: TCP, port: 8300, targetPort: 8080}
+  type: LoadBalancer
