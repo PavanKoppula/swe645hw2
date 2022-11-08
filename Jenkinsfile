@@ -1,7 +1,7 @@
 pipeline {
     agent any
     environment {
-        PROJECT_ID = 'endless-ripple-364123'
+        PROJECT_ID = 'mythic-inn-367421'
                 CLUSTER_NAME = 'k8s-cluster'
                 LOCATION = 'us-east4-a'
                 CREDENTIALS_ID = 'kubernetes'
