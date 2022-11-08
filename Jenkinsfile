@@ -17,7 +17,7 @@ pipeline {
             steps {
                 script {
                     sh 'rm -rf *.war'
-                    sh 'jar -cvf StudentSurvey.war -C *'
+                    sh 'jar -cvf StudentSurvey.war -C /src/main/webapp .'
                     app = docker.build("pavankoppula/studentsurvey645:${env.BUILD_ID}")
                     }
             }
