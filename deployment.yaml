@@ -1,23 +1,23 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: survey-form-pipeline
+  name: cs-survey-form
   labels: 
-    app: survey-form-pipeline
+    app: cs-survey-form
 spec:
   replicas: 3
   strategy:
     type: Recreate
   selector:
     matchLabels: 
-      app: survey-form-pipeline
+      app: cs-survey-form
   template:
     metadata:
       labels: 
-        app: survey-form-pipeline
+        app: cs-survey-form
     spec:
       containers:
-      - name: survey-form-pipeline
+      - name: cs-survey-form
         image: pavankoppula/studentsurvey645:tagversion
         ports:
         - {name: tomcat, containerPort: 8080}
@@ -26,10 +26,10 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name: swe645-hw2-service-account
+  name: swe645-cs-survey-service-name
 spec:
   selector: 
-    app: survey-form-pipeline
+    app: cs-survey-form
   ports:
   - {name: tomcat, protocol: TCP, port: 8300, targetPort: 8080}
   type: LoadBalancer
