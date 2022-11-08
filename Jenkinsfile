@@ -4,7 +4,7 @@ pipeline {
         PROJECT_ID = 'endless-ripple-364123'
                 CLUSTER_NAME = 'k8s-cluster'
                 LOCATION = 'us-east4-a'
-                CREDENTIALS_ID = 'Kubernetes'
+                CREDENTIALS_ID = 'kubernetes'
     }
     
     stages {
