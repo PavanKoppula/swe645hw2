@@ -15,10 +15,12 @@ spec:
     metadata:
       labels: 
         app: cs-survey-form
+        tier: cs-survey-form
     spec:
       containers:
       - name: cs-survey-form
         image: pavankoppula/studentsurvey645:tagversion
+        imagePullPolicy: Always
         ports:
         - {name: tomcat, containerPort: 8080}
         imagePullPolicy: Always
@@ -30,6 +32,7 @@ metadata:
 spec:
   selector: 
     app: cs-survey-form
+    tier: cs-survey-form
   ports:
-  - {name: tomcat, protocol: TCP, port: 8300, targetPort: 8080}
+  - {name: tomcat, protocol: TCP, port: 8400, targetPort: 8080}
   type: LoadBalancer
